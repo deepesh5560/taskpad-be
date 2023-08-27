@@ -1,0 +1,2 @@
+DATABASE=mongodb+srv://deepesh912:deepesh912@cluster0.zla3nx5.mongodb.net/01-todo?retryWrites=true&w=majority
+TOKEN_SECRET=deepesh5560

@@ -9,7 +9,7 @@ var cors = require("cors");
 const app = express();
 app.use(cors());
 
-const PORT = 8000;
+const PORT =process.env.DB_PORT || 8000;
 const DB = process.env.DATABASE;
 
 app.use(express.json());
@@ -20,8 +20,8 @@ app.use("/", cateogoryrouter);
 
 mongoose
   .connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log(console.log("DB connection successfully done")))
-  .catch((error) => console.log(console.log("DB connection failed")));
+  .then(() => console.log("DB connection successfully done"))
+  .catch((error) => console.log("DB connection failed"));
 app.get("/", (req, res) => {
   res.send("Hello, World!");
 });

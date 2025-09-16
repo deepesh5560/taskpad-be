@@ -23,7 +23,7 @@ mongoose
   .then(() => console.log("DB connection successfully done"))
   .catch((error) => console.log("DB connection failed"));
 app.get("/", (req, res) => {
-  res.send("Hello, World!");
+  res.send("Hello, World! from EC2");
 });
 
 app.listen(PORT, () => {
